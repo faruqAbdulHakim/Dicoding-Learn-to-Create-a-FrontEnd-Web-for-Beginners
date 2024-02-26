@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Faruq Abdul Hakim" />
+    <link rel="stylesheet" href="./css-reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Bookshelf App</title>
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <header class="container">
+      <h1 class="title">Bookshelf App</h1>
+    </header>
+
+    <main class="container">
+      <section>
+        <form class="form">
+          <h2 class="subtitle form-title">Add a book manually</h2>
+          <div class="form-control">
+            <input
+              class="form-input"
+              type="text"
+              name="title"
+              placeholder="Title"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <input
+              class="form-input"
+              type="text"
+              name="author"
+              placeholder="Author"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <input
+              class="form-input"
+              type="number"
+              name="year"
+              placeholder="Year"
+              min="0"
+              max="2045"
+              step="1"
+            />
+          </div>
+          <div class="form-control">
+            <input
+              class="form-checkbox"
+              type="checkbox"
+              name="isComplete"
+              id="isComplete"
+            />
+            <label class="form-checkbox-label" for="isComplete">
+              <span class="checkmark"></span>
+              Finished
+            </label>
+          </div>
+          <div class="form-action">
+            <button type="reset" class="btn ghost-btn">Clear</button>
+            <button type="button" class="btn ghost-btn hide">Cancel</button>
+            <button type="submit" class="btn submit-btn">Save</button>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <form class="search-form">
+          <div class="form-control">
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Search book by title, author, or year"
+              name="search"
+              id="search"
+            />
+            <label for="search" class="btn btn-ico">
+              <i class="bx bx-search"></i>
+            </label>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <h2 class="subtitle">Finished</h2>
+        <div class="finished-books"></div>
+      </section>
+
+      <section>
+        <h2 class="subtitle">To read</h2>
+        <div class="unfinished-books"></div>
+      </section>
+    </main>
+  </body>
+</html>
